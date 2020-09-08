@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Variables  ../PageObjects/Locators.py
 
 *** Variables ***
 ${browser}  chrome
@@ -22,10 +23,10 @@ Navigate to the page
     click element   id:onesignal-slidedown-cancel-button
 
 Login
-    click element   class:item-login
-    input text      id:user_login_username    ${userName}
-    input text      id:user_login_password      ${password}
-    click element    xpath=//*[@id="form-login"]/div[2]/button
+    click element   ${login_btn}
+    input text      ${email_input_field}    ${userName}
+    input text      ${password_input_field}      ${password}
+    click element    ${submit_btn}
     Element Text Should Be    locator    expected_text
 
 ChangePassword

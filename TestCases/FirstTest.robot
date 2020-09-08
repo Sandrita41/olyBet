@@ -1,5 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
+Variables  ../PageObjects/Locators.py
 
 *** Variables ***
 ${browser}  chrome
@@ -16,10 +17,8 @@ HandligAlerts
 
 *** Keywords ***
 Navigate to the page
-    [Arguments] ${appurl} ${appbrowser}
-    open browser    ${appurl}   ${appbrowser}
+    open browser    ${url}   ${browser}
     maximize browser window
-    set selenium speed  3 seconds
    # sleep   3
     #handle alert    dismiss
     sleep   5
@@ -28,9 +27,9 @@ Navigate to the page
 
 Login
     click element   class:item-login
-    input text      id:user_login_username    ${userName}
-    input text      id:user_login_password      ${password}
-    click element    xpath=//*[@id="form-login"]/div[2]/button
+    input text      ${email_input_field}    ${userName}
+    input text      ${password_input_field}      ${password}
+    click element    ${login_btn}
     element attribute value should be       value:Test770083
   #  Element Text Should Be    locator    expected_text
 
