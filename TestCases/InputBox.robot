@@ -12,24 +12,34 @@ ${password}   Waitreb5DCCYwN
 HandligAlerts
     Navigate to the page
     Login
-    close browser
+    #Change password
+    [Teardown]    Close Browser
 
 *** Keywords ***
 Navigate to the page
     open browser    ${url}  ${browser}
     maximize browser window
-    sleep   5
-    wait until page contains element    id:onesignal-slidedown-dialog
-    click element   id:onesignal-slidedown-cancel-button
+    sleep   2
+    click element   slide_down_container_accept_btn
+
 
 Login
     click element   ${login_btn}
     input text      ${email_input_field}    ${userName}
     input text      ${password_input_field}      ${password}
     click element    ${submit_btn}
-    Element Text Should Be    locator    expected_text
+    sleep  5
+    Element Text Should Be  ${profile_contract_No}    (Contract № 907803)
 
-ChangePassword
+Change password
+    execute javascript  window.scrollTo(0,800)
+    sleep   2
+    click element   ${changePassword_btn}
+    sleep  5
+    Element Text Should Be    ${popup_title}    Change password
+    input text    ${changePassword_current_field}     ${password}
+    input text      ${new_password_input_field}     ${password}
+    click element      ${password_confirmation_btn}
 
 
 
