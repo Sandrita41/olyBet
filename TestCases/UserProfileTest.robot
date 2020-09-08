@@ -12,7 +12,7 @@ ${password}   Waitreb5DCCYwN
 HandligAlerts
     Navigate to the page
     Login
-    #Change password
+    Change password
     [Teardown]    Close Browser
 
 *** Keywords ***
@@ -26,7 +26,7 @@ Navigate to the page
 Login
     click element   ${login_btn}
     input text      ${email_input_field}    ${userName}
-    input text      ${password_input_field}      ${password}
+    input text      ${password_input_field}      NewPassword
     click element    ${submit_btn}
     sleep  5
     Element Text Should Be  ${profile_contract_No}    (Contract № 907803)
