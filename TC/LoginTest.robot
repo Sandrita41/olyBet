@@ -1,17 +1,17 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  ..\Resources\LoginKeywords.robot
+Library    Collections
+Resource  ../../Resources/Keywords.robot
 
 *** Variables ***
-${Browser}  chrome
-${SiteUrl}  https://www.olybet.lt/user/profile
-${userName}   assignmenttaskv@oit.lt
-${password}   Waitreb5DCCYwN
+${browser}  chrome
+${siteUrl}  https://www.olybet.lt/user/profile
+${user}     assignmenttaskv@oit.lt
+${pwd}  Waitreb5DCCYwN
 
 *** Test Cases ***
 LoginTest
-    Navigate    ${SiteUrl}  ${Browser}
-    Enter UserName      ${userName}
-    Enter Password      ${password}
+    Open my Browser ${siteUrl} ${browser}
+    Enter username  ${user}
+    Enter password  ${pwd}
     Click SignIn
-    close my browser

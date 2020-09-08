@@ -11,8 +11,7 @@ ${password}   Waitreb5DCCYwN
 HandligAlerts
     Navigate to the page
     Login
-    #close browser
-   # element should be visible   id:onesignal-slidedown-dialog
+    close browser
 
 *** Keywords ***
 Navigate to the page

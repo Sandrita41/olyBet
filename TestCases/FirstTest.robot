@@ -16,7 +16,8 @@ HandligAlerts
 
 *** Keywords ***
 Navigate to the page
-    open browser    ${url}  ${browser}
+    [Arguments] ${appurl} ${appbrowser}
+    open browser    ${appurl}   ${appbrowser}
     maximize browser window
     set selenium speed  3 seconds
    # sleep   3
