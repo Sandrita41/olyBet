@@ -10,5 +10,6 @@ popup_title = 'class:popup-box-title'
 profile_contract_No = "xpath=//a[contains(text(),'(Contract')]"
 first_name = "//input[@name='firstName']"
 slide_down_container_accept_btn = "id:onesignal-slidedown-cancel-button"
+close_modal_btn = "xpath=//div[@class='popup-box-close ora-modal-close']"
 
 

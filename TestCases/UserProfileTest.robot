@@ -20,13 +20,13 @@ Navigate to the page
     open browser    ${url}  ${browser}
     maximize browser window
     sleep   2
-    click element   slide_down_container_accept_btn
-
+    wait until page contains element    id:onesignal-slidedown-dialog
+    click element   id:onesignal-slidedown-cancel-button
 
 Login
     click element   ${login_btn}
     input text      ${email_input_field}    ${userName}
-    input text      ${password_input_field}      NewPassword
+    input text      ${password_input_field}      ${password}
     click element    ${submit_btn}
     sleep  5
     Element Text Should Be  ${profile_contract_No}    (Contract № 907803)
@@ -38,8 +38,10 @@ Change password
     sleep  5
     Element Text Should Be    ${popup_title}    Change password
     input text    ${changePassword_current_field}     ${password}
-    input text      ${new_password_input_field}     ${password}
+    input text      ${new_password_input_field}     NewPassword
     click element      ${password_confirmation_btn}
+    Element Text Should Be  class:paragraph    Your password was changed successfully
+    click element       ${close_modal_btn}
 
 
 
