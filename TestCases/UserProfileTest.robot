@@ -13,14 +13,14 @@ HandligAlerts
     Navigate to the page
     Login
     Change password
-    [Teardown]    Close Browser
+   # [Teardown]    Close Browser
 
 *** Keywords ***
 Navigate to the page
     open browser    ${url}  ${browser}
     maximize browser window
     sleep   4
-    wait until page contains element    id:onesignal-slidedown-dialog
+    wait until page contains element    ${slide_down_dialog}
     click element   ${slide_down_container_cancel_btn}
 
 Login
@@ -41,8 +41,6 @@ Change password
     input text      ${new_password_input_field}     NewPassword
     click element      ${password_confirmation_btn}
     sleep  4
-    #wait until page contains element    id:ora-modal
-    #Element Text Should Be    class:paragraph    Password changed
     click element       ${close_modal_btn}
     sleep  4
     click element       ${user_profile_btn}
