@@ -26,7 +26,7 @@ Navigate to the page
 Login
     click element   ${login_btn}
     input text      ${email_input_field}    ${userName}
-    input text      ${password_input_field}      NewPassword
+    input text      ${password_input_field}      ${password}
     click element    ${submit_btn}
     sleep  5
     Element Text Should Be  ${profile_contract_No}    (Contract № 907803)
@@ -38,7 +38,7 @@ Change password
     sleep  5
     Element Text Should Be    ${popup_title}    Change password
     input text    ${changePassword_current_field}     ${password}
-    input text      ${new_password_input_field}     ${password}
+    input text      ${new_password_input_field}     NewPassword
     click element      ${password_confirmation_btn}
     sleep  4
     #wait until page contains element    id:ora-modal
