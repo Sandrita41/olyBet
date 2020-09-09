@@ -10,7 +10,7 @@ Before starting setup framework
 - Robot framework Selenium Library
 
 2. Set Phyton in to environment variables on your computer
-3. download browser drivers and add in to the project System file
+3. download browser drivers and add in to the project Script folder (drivers will be get from this particular folder)
 4. Open editor and install IntellijBot Selenium library Plugin:
 - File -> Settings -> Plugins -> Search for required plugin
 
