@@ -9,7 +9,7 @@ password_confirmation_btn = "xpath=//button[@class='button primary main']"
 popup_title = 'class:popup-box-title'
 profile_contract_No = "xpath=//a[contains(text(),'(Contract')]"
 first_name = "//input[@name='firstName']"
-slide_down_container_accept_btn = "id:onesignal-slidedown-cancel-button"
+slide_down_container_cancel_btn = "id:onesignal-slidedown-cancel-button"
 close_modal_btn = "xpath=//div[@class='popup-box-close ora-modal-close']"
-
-
+user_profile_btn = "xpath=//li[@class='has-submenu item-profile']//div[@class='item-text']"
+sign_out_btn = "xpath=//a[contains(text(),'Sign out')]"
