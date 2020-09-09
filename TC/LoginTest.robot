@@ -11,7 +11,7 @@ ${pwd}  Waitreb5DCCYwN
 
 *** Test Cases ***
 LoginTest
-    Open my Browser ${siteUrl} ${browser}
+    Open my Browser  ${siteUrl}  ${browser}
     Enter username  ${user}
     Enter password  ${pwd}
     Click SignIn
