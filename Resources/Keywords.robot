@@ -19,5 +19,3 @@ Enter password
 
 Click SignIn
     click button    ${login_btn}
-
-#Verify Successful Login
