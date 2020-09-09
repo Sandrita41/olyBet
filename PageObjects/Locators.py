@@ -15,7 +15,3 @@ user_profile_btn = "xpath=//li[@class='has-submenu item-profile']//div[@class='i
 sign_out_btn = "xpath=//a[contains(text(),'Sign out')]"
 slide_down_dialog = "id:onesignal-slidedown-dialog"
 nba_text = "class:nba-text"
-
-
-def my_function():
-    print("Hello from a function")
