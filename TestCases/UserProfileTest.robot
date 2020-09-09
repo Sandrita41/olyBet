@@ -14,7 +14,7 @@ HandligAlerts
     Login
     Change password
     SignOut
-   # [Teardown]    Close Browser
+    [Teardown]    Close Browser
 
 *** Keywords ***
 Navigate to the page
@@ -41,6 +41,8 @@ Change password
     input text    ${changePassword_current_field}     ${password}
     input text      ${new_password_input_field}     NewPassword
     click element      ${password_confirmation_btn}
+    sleep  4
+    Element Text Should Be  ${nba_text}    (Oficialus NBA lažybų partneris)
 
 
 SignOut
