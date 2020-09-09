@@ -13,6 +13,7 @@ HandligAlerts
     Navigate to the page
     Login
     Change password
+    SignOut
    # [Teardown]    Close Browser
 
 *** Keywords ***
@@ -40,11 +41,13 @@ Change password
     input text    ${changePassword_current_field}     ${password}
     input text      ${new_password_input_field}     NewPassword
     click element      ${password_confirmation_btn}
+
+
+SignOut
     sleep  4
     click element       ${close_modal_btn}
     sleep  4
     click element       ${user_profile_btn}
     click element       ${sign_out_btn}
-
 
 

@@ -14,3 +14,7 @@ close_modal_btn = "xpath=//div[@class='popup-box-close ora-modal-close']"
 user_profile_btn = "xpath=//li[@class='has-submenu item-profile']//div[@class='item-text']"
 sign_out_btn = "xpath=//a[contains(text(),'Sign out')]"
 slide_down_dialog = "id:onesignal-slidedown-dialog"
+
+
+def my_function():
+    print("Hello from a function")
